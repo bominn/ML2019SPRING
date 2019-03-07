@@ -1,1 +1,1 @@
-python linear_regression.py $1 $2
+python3 linear_regression.py $1 $2
