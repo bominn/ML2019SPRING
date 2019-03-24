@@ -24,7 +24,7 @@ y_train = y_train.reshape(-1)
 
 mean = np.mean(x_train, axis = 0)
 std = np.std(x_train, axis = 0)
-x_train = (x_train-mean)/(std+1e-100)
+x_train = (x_train-mean)/(std+1e-10000)
 
 # class A : > 50K
 A_cls = (y_train == 1)
