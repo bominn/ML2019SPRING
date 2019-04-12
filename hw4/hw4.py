@@ -121,9 +121,9 @@ def show_saliency_maps(x, y, model):
         plt.imshow(x_org[i], cmap=plt.cm.gray)
         #plt.savefig('pic_'+ str(i)+'.jpg')
         plt.imshow(saliency[i],cmap=plt.cm.jet)
-		plt.colorbar()
+        plt.colorbar()
         plt.savefig(a.output_file+'fig1_'+ str(i)+'.jpg')
-		plt.close()
+        plt.close()
 
 find = [0, 299, 2, 7, 3, 15, 4]  #each class one image in data 
 
