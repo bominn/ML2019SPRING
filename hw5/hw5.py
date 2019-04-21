@@ -43,7 +43,7 @@ class adverdataset(Dataset):
              self.fnames.append('{:03}'.format(i))
     
     def __getitem__(self, idx):
-        img = Image.open(self.root+self.fnames[idx]+'.png')
+        img = Image.open(os.path.join(self.root,self.fnames[idx]+'.png'))
         img = self.transforms(img)
         label = self.label[idx]
         return img, label
@@ -144,7 +144,7 @@ class FastGradientSignUntargeted():
         '''
         new_img = recreate_image(img)
         new_img = Image.fromarray(new_img)
-        path = a.output_dir+'{:03}'.format(idx)+'.png'
+        path = os.path.join(a.output_dir,'{:03}'.format(idx)+'.png')
         if os.path.isfile(path):
             os.remove(path)
         new_img.save(path)
