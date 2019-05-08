@@ -1,1 +1,1 @@
-python3 test_rnn.py $1 $2 $3
+python3 test_gru.py $1 $2 $3
