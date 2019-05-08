@@ -17,7 +17,7 @@ a = parser.parse_args()
 
 jieba.load_userdict(a.jieba_file)
 
-f = open('word.pkl','rb')
+f = open('word_dict.pkl','rb')
 
 vocab = pickle.load(f)
 
@@ -98,7 +98,7 @@ for text in seq_test_text:
         check = punctuation_search.match(word,0)
         if type(check)== type(None):
             try:
-                clean_list.append(vocab[word].index)
+                clean_list.append(vocab[word])
             except:
                 
                 pad = dummy_index
