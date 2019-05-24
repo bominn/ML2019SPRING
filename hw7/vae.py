@@ -145,14 +145,14 @@ latent_space = np.asarray(latent_sapce)
 pca = PCA(n_components=100, copy=False, whiten=True, svd_solver='full')
 latent_vec = pca.fit_transform(latent_space)
 
-#kmeans = KMeans(n_clusters=2, random_state=2, max_iter=1000).fit(latent_vec)
+kmeans = KMeans(n_clusters=2, random_state=2, max_iter=1000).fit(latent_vec)
 
 #load kmeans for reproduce
-f = open('kmean.pkl','rb')
-kmeans = pickle.load(f)
-f.close()
+#f = open('kmean.pkl','rb')
+#kmeans = pickle.load(f)
+#f.close()
 
-kmeans.labels_ = kmeans.predict(latent_vec)
+#kmeans.labels_ = kmeans.predict(latent_vec)
 
 
 #read test case
