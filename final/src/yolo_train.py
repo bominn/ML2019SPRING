@@ -26,20 +26,17 @@ def load_checkpoint(checkpoint_path, model, optimizer):
 def main():
     use_gpu = torch.cuda.is_available()
 
-    train_root = '../train/'
-    #valid_root = 'valid/'
+    train_root = 'train/'
+    
     learning_rate = 0.001
     num_epochs = 20
     batch_size = 8
 
-    #model = Yolov1_vgg16bn()
     model = vgg19_bn()
-    #model = resmodel.feature_extractor()
     optimizer = torch.optim.SGD([{"params":model.parameters()}], lr=learning_rate, momentum=0.9, weight_decay=5e-4)
 
-    print('load pre-trined model')
+    print('load pre-trained model')
 
-    #vgg = models.vgg16_bn(pretrained=True)
     
     vgg = models.vgg19_bn(pretrained=True)
     
@@ -70,10 +67,10 @@ def main():
 
 
 
-    train_dataset = yolodataset(root=train_root, train=True, transform = transforms.ToTensor(), label='train.txt')
+    train_dataset = yolodataset(root=train_root, train=True, transform = transforms.ToTensor(), label='./src/yolo_train.txt')
     train_loader = DataLoader(train_dataset, batch_size=16, shuffle=True, num_workers=2)
 
-    valid_dataset = yolodataset(root=train_root, train=False, transform = transforms.ToTensor(), label='valid.txt')
+    valid_dataset = yolodataset(root=train_root, train=False, transform = transforms.ToTensor(), label='./src/yolo_valid.txt')
     valid_loader = DataLoader(valid_dataset, batch_size=16, shuffle=False, num_workers=2)
     best_test_loss = 1.0
 

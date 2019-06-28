@@ -26,7 +26,7 @@ def save_checkpoint(checkpoint_path, model, optimizer):
 def main():
     use_gpu = torch.cuda.is_available()
 
-    test_root = '../test/'
+    test_root = 'test/'
 
 
 
@@ -35,7 +35,7 @@ def main():
     model = vgg19_bn()
     print('load pre-trained model')
 
-    load_checkpoint('../models/yolo.pth', model)
+    load_checkpoint('models/yolo.pth', model)
 
 
 

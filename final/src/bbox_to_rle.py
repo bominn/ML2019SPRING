@@ -13,8 +13,8 @@ import sys, os
 from PIL import ImageFile
 
 IN_CSV = "./pred.csv"
-OUT_CSV = "../submission.csv"
-IMG_DIR = "../test" # read image for calculating images' shape
+OUT_CSV = "./submission.csv"
+IMG_DIR = "./test" # read image for calculating images' shape
 
 
 def main():    

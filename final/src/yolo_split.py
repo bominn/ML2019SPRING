@@ -5,7 +5,7 @@ import torch
 import csv
 
 def yolo_format():
-    with open('../train_labels.csv', 'r') as f:
+    with open('train_labels.csv', 'r') as f:
         file = open('a.txt','w')
         csv_reader = csv.reader(f, delimiter=',')
         line_count = 0
@@ -33,8 +33,8 @@ def yolo_split():
     lines = f.readlines()
     print(len(lines))
 
-    t = open('train.txt','w')
-    v = open('valid.txt','w')
+    t = open('./src/yolo_train.txt','w')
+    v = open('./src/yolo_valid.txt','w')
     for i in range(1, len(lines)-1):
         if i > 17500:
             v.write(lines[i])
