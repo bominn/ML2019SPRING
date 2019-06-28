@@ -153,7 +153,7 @@ class CSVDataset(Dataset):
                 self.image_data = self._read_annotations(csv.reader(file, delimiter=','), self.classes)
         except ValueError as e:
             raise_from(ValueError('invalid CSV annotations file: {}: {}'.format(self.train_file, e)), None)
-        self.image_names = list(self.image_data.keys())
+        self.image_names = sorted(list(self.image_data.keys()))
         
     def _parse(self, value, function, fmt):
         """
