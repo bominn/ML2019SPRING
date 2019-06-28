@@ -15,11 +15,11 @@ you should put data in github folder, it should look like:
     .
 
 ## Pretrained model
-If you want to reproduce kaggle result, run this script to download pretrained model
+If you want to reproduce kaggle result, run this script to download pretrained model.
 
     bash ./get_model.sh
- The shell script will download the models for both yolov1 and retinanet
- 
+ The shell script will download the models for both yolov1 and retinanet. 
+ If you are having trouble downloading the models using shell script, you can download the models from [yolo](https://drive.google.com/drive/folders/1enjLUXsh7fCDXKPhRR4maWvgG55d4646) and [retinanet](https://drive.google.com/drive/folders/1enjLUXsh7fCDXKPhRR4maWvgG55d4646) and put model in the folder `models/`.
  ## Yolov1 case
  
  ### Predict by pretrained model
