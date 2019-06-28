@@ -1,5 +1,7 @@
 # ML2019Spring-Final-DeepQ
-
+>This is the final project from [ML2019SPRING](http://speech.ee.ntu.edu.tw/~tlkagk/courses_ML19.html) which we are asked to implement object detection on medical image.  
+>You can see the result in the [`result.pdf`]  
+>[Kaggle link](https://www.kaggle.com/c/ml2019spring-final-deepq/overview)
 ## Toolkit version
 > [`python`](https://www.python.org/): 3.6
 > [`torch`](https://pytorch.org/): 1.0.1
@@ -43,7 +45,7 @@ If you want to reproduce kaggle result, run this script to download pretrained m
  ## Yolov1 case
  
  ### Predict by pretrained model
- This shell script will load pretraind model 'yolo.pth' and generate 'submission.csv' for kaggle. 
+ This shell script will load pretraind model `yolo.pth` and generate `submission.csv` for kaggle. 
  
     bash ./yolo_test.sh
  | kaggle public score | kaggle private score |
@@ -55,14 +57,14 @@ Deafult feature extractor is VGG19_bn pretrained on ImageNet. 1 epochs takes 6-7
 
     bash ./yolo_train.sh
 #### Data preprocessing
-You can change line 39-42 in yolo_split.py to split data.
+You can change line 39-42 in `yolo_split.py` to split data.
 #### Predict by own model
-Change model path in yolo_test.py (line 38).
+Change model path in `yolo_test.py` (line 38).
 
 ## Retinanet case
 
 ### Predict by pretrained model
-This shell script will load pretraind model 'retinanet.pth' and generate 'submission.csv' for kaggle.  
+This shell script will load pretraind model `retinanet.pth` and generate `submission.csv` for kaggle.  
 Beacause I detect image one by one and use cpu to run nms, so it takes probably 15 min to run this script.
 
     bash ./retinanet_test.sh
@@ -79,9 +81,9 @@ Deafult feature extractor is ResNet50 pretrained on ImageNet. 1 epoch take 30-35
 
     bash ./retinanet_train.sh
 #### Data preprocessing
-You can change line 41-45 in preprocessing.py to split data.
+You can change line 41-45 in `preprocessing.py` to split data.
 #### Predict by own model 
-Change model path in retinanet_test.py (line 30).  
+Change model path in `retinanet_test.py` (line 30).  
 
 I think the score_threshold(deafult = 0.5) for each retinanet model is different, maybe you should find a suitable value.
 
