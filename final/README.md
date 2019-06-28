@@ -8,7 +8,7 @@
 > [`numpy`](http://www.numpy.org/): 1.16.2 
 > [`pandas`](https://pandas.pydata.org/): 0.24.2
 > [`torchvision`](https://pypi.org/project/torchvision/): 0.2.2
-> [`cv2`](https://pypi.org/project/opencv-python/): 3.4.3
+> [`cv2`](https://pypi.org/project/opencv-python/)
 > [`PIL`](https://pypi.org/project/Pillow/): 5.4.1
 > [`scikit-image`](https://scikit-image.org/)
 > [`future`](https://pypi.org/project/future/):0.17.1  
