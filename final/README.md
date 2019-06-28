@@ -23,14 +23,15 @@ If you want to reproduce kaggle result, run this script to download pretrained m
  ## Yolov1 case
  
  ### Predict by pretrained model
- This shell script will load pretraind model 'yolo.pth' and generate submission.csv for kaggle 
+ This shell script will load pretraind model 'yolo.pth' and generate 'submission.csv' for kaggle 
  
     bash ./yolo_test.sh
  | kaggle public score | kaggle private score |
  | :--: | :--: |
  | 0.21330 | 0.17911 |
  ### Train own model
-You can simply run this script to train model, this use first 17500 images for train and the rest for validation and save model in folder models 
+You can simply run this script to train model, this use first 17500 images for train and the rest for validation and save model in folder `models/`.  
+Deafult feature extractor is VGG19_bn pretrained on Imagenet
 
     bash ./yolo_train.sh
 #### Date preprocessing
@@ -41,4 +42,11 @@ Change model path in yolo_test.py (line 38)
 ## Retinanet case
 
 ### Predict by pretrained model
-This shell script will load pretraind model 'yolo.pth' and generate submission.csv for kaggle
+This shell script will load pretraind model 'retinanet.pth' and generate 'submission.csv' for kaggle
+
+    bash ./retinanet_test.sh
+ | kaggle public score | kaggle private score |
+ | :--: | :--: |
+ | 0.24567 | 0.20000 |
+ 
+ 
