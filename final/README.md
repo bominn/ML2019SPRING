@@ -1,14 +1,33 @@
 # ML2019Spring-Final-DeepQ
 
+## Toolkit version
+> [`python`](https://www.python.org/): 3.6
+> [`torch`](https://pytorch.org/): 1.0.1
+> [`numpy`](http://www.numpy.org/): 1.16.2 
+> [`pandas`](https://pandas.pydata.org/): 0.24.2
+> [`torchvision`](https://pypi.org/project/torchvision/): 0.2.2
+> [`cv2`](https://pypi.org/project/opencv-python/): 3.4.3
+> [`PIL`](https://pypi.org/project/Pillow/): 5.4.1
+> [`scikit-image`](https://scikit-image.org/)
+> [`future`](https://pypi.org/project/future/):0.17.1  
+> [The Python Standard Library](https://docs.python.org/3/library/)
+
+# Usage:
+To start with this project, please get the dataset first.
 ## Dataset
-you should put data in github folder, it should look like:
+you should put train/test images and train_labels.csv in github folder, it should look like:
 
     models
     src
     .gitignore
-    train(folder include train image)
-    test(folder include test image)
+    train/
+    ├── train00000.png
+    ├── train00001.png .....
+    test/
+    ├── test0000.png
+    ├── test0001.png .....
     train_labels.csv
+    README.md
     report.pdf
     requirement.txt
     .
@@ -16,7 +35,7 @@ you should put data in github folder, it should look like:
     .
 
 ## Pretrained model
-If you want to reproduce kaggle result, run this script to download pretrained model.
+If you want to reproduce kaggle result, run this script to download pretrained model first.
 
     bash ./get_model.sh
  The shell script will download the models for both yolov1 and retinanet. 
