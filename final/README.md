@@ -21,7 +21,6 @@ you should put train/test images and train_labels.csv in github folder, it shoul
 
     models
     src
-    .gitignore
     train/
     ├── train00000.png
     ├── train00001.png .....
@@ -29,6 +28,7 @@ you should put train/test images and train_labels.csv in github folder, it shoul
     ├── test0000.png
     ├── test0001.png .....
     train_labels.csv
+    .gitignore
     README.md
     report.pdf
     requirement.txt
