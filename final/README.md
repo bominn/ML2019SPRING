@@ -1,6 +1,6 @@
 # ML2019Spring-Final-DeepQ
 >This is the final project from [ML2019SPRING](http://speech.ee.ntu.edu.tw/~tlkagk/courses_ML19.html) which we are asked to implement object detection on medical image.  
->You can see the result in the [`result.pdf`]  
+>You can see the result in the [`report.pdf`](https://github.com/bominn/ML2019SPRING/blob/master/final/report.pdf)  
 >[Kaggle link](https://www.kaggle.com/c/ml2019spring-final-deepq/overview)
 ## Toolkit version
 > [`python`](https://www.python.org/): 3.6
