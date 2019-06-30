@@ -41,7 +41,7 @@ If you want to reproduce kaggle result, run this script to download pretrained m
 
     bash ./get_model.sh
  The shell script will download the models for both yolov1 and retinanet. 
- If you are having trouble downloading the models using shell script, you can download the models from [yolo](https://drive.google.com/open?id=1eosYAAU1JnKwvGpczDHv1xfxG9lzarVz) and [retinanet](https://drive.google.com/open?id=1-gW-7ATWIdZ6bhfnRwIr7JKtTTjmy385) and put model in the folder `models/`.
+ If you are having trouble downloading the models using shell script, you can download the models from [yolo](https://drive.google.com/open?id=1eosYAAU1JnKwvGpczDHv1xfxG9lzarVz) and [retinanet](https://drive.google.com/open?id=1-gW-7ATWIdZ6bhfnRwIr7JKtTTjmy385), rename `retinanet.pt`to`retinanet.pth` and put two models in the folder `models/`.
  ## Yolov1 case
  
  ### Predict by pretrained model
