@@ -53,7 +53,8 @@ If you want to reproduce kaggle result, run this script to download pretrained m
  | 0.21330 | 0.17911 |
  ### Train your own model
 You can simply run this script to train model, this use first 17500 images for training and the rest for validation and save model in folder `models/`.  
-Deafult feature extractor is VGG19_bn pretrained on ImageNet. 1 epochs takes 6-7 mins for 1080ti. 
+Deafult feature extractor is VGG19_bn pretrained on ImageNet. 1 epochs takes 6-7 mins for 1080ti.   
+When validation loss is about 0.86-0.87 will get the better result.
 
     bash ./yolo_train.sh
 #### Data preprocessing
@@ -77,7 +78,8 @@ You can simply run this script to train model, this use first 20000 cases for tr
 
 Same as test, detect image one by one and use cpu nms in validation part.  
 
-Deafult feature extractor is ResNet50 pretrained on ImageNet. 1 epoch take 30-35 mins for 1080ti.
+Deafult feature extractor is ResNet50 pretrained on ImageNet. 1 epoch take 30-35 mins for 1080ti.  
+My pretrain model is 8th epoch. 
 
     bash ./retinanet_train.sh
 #### Data preprocessing
